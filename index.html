@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SpiceRoute — a concept online-ordering page for a modern Indian kitchen. Working cart demo, CSS-drawn dishes, entirely sample menu and prices.">
+  <meta name="theme-color" content="#7a1f1f">
+  <title>SpiceRoute — Order the long way home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to menu</a>
+
+  <!-- ======== HEADER ======== -->
+  <header class="hdr">
+    <div class="hdr__inner">
+      <a href="#" class="hdr__brand" aria-label="SpiceRoute home">
+        <span class="hdr__logo" aria-hidden="true">✦</span>
+        <span>Spice<b>Route</b></span>
+      </a>
+      <p class="hdr__meta mono">CONCEPT DEMO · SAMPLE MENU · CART STORES NOTHING</p>
+      <button class="cart-btn" id="cartBtn" type="button" aria-haspopup="dialog" aria-controls="cartPanel">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6h15l-1.5 8.5a2 2 0 01-2 1.5H9.5a2 2 0 01-2-1.6L6 3H3"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+        <span>Your order</span>
+        <span class="cart-btn__count" id="cartCount" aria-label="Items in cart">0</span>
+      </button>
+    </div>
+
+    <!-- sticky category nav -->
+    <nav class="catnav" aria-label="Menu categories">
+      <div class="catnav__inner">
+        <a href="#starters" class="catnav__link is-active">Starters</a>
+        <a href="#mains" class="catnav__link">Mains</a>
+        <a href="#breads" class="catnav__link">Breads</a>
+        <a href="#rice" class="catnav__link">Rice &amp; Sides</a>
+        <a href="#desserts" class="catnav__link">Desserts</a>
+        <a href="#drinks" class="catnav__link">Drinks</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ======== HERO ======== -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div>
+          <p class="hero__over">A concept ordering experience · nothing here is a real restaurant</p>
+          <h1>Order the <em>long way</em> home.</h1>
+          <p class="hero__sub">SpiceRoute imagines a web ordering page for a modern Indian kitchen: a cart that behaves, a menu you can skim in ten seconds, and dishes drawn in CSS because this concept never hired a food photographer.</p>
+          <div class="hero__chips" role="list" aria-label="Ordering options">
+            <span role="listitem" class="chip">🛵 Pickup in 25 min</span>
+            <span role="listitem" class="chip">📍 Delivery — sample radii</span>
+            <span role="listitem" class="chip">🌶 Heat dials on every curry</span>
+          </div>
+          <a href="#starters" class="btn btn--saffron">Start the demo order</a>
+        </div>
+        <div class="hero__art" aria-hidden="true">
+          <div class="thali">
+            <span class="thali__rim"></span>
+            <span class="thali__bowl b1"><i style="background: radial-gradient(circle at 35% 30%, #f7c873, #e09a2f 60%, #b3711a);"></i></span>
+            <span class="thali__bowl b2"><i style="background: radial-gradient(circle at 35% 30%, #f2a09b, #c9524a 60%, #8f332c);"></i></span>
+            <span class="thali__bowl b3"><i style="background: radial-gradient(circle at 35% 30%, #d7e4b3, #8fae57 60%, #5f7a35);"></i></span>
+            <span class="thali__bowl b4"><i style="background: radial-gradient(circle at 35% 30%, #f5e6c8, #d9b978 60%, #a8863e);"></i></span>
+            <span class="thali__rice"></span>
+            <span class="thali__steam s1"></span><span class="thali__steam s2"></span><span class="thali__steam s3"></span>
+          </div>
+        </div>
+      </div>
+      <p class="hero__note mono">All prices, wait times and dish names below are invented for the design study.</p>
+    </section>
+
+    <!-- ======== HOW IT WORKS ======== -->
+    <section class="howto" id="howto" aria-label="How ordering works">
+      <div class="howto__inner">
+        <div class="step"><span class="step__n mono">1</span><p><strong>Add to the cart.</strong> Every card below is live — quantities, subtotal and taxes compute for real.</p></div>
+        <span class="step__arrow" aria-hidden="true">→</span>
+        <div class="step"><span class="step__n mono">2</span><p><strong>Choose pickup or delivery.</strong> The demo checkout summarizes the order; it sends nothing anywhere.</p></div>
+        <span class="step__arrow" aria-hidden="true">→</span>
+        <div class="step"><span class="step__n mono">3</span><p><strong>Admire the fiction.</strong> A working front-of-house demo with zero backend, zero customers, zero dal consumed.</p></div>
+      </div>
+    </section>
+
+    <!-- ======== MENU ======== -->
+    <div class="menu">
+      <!-- STARTERS -->
+      <section class="course" id="starters">
+        <header class="course__head"><h2>Starters</h2><p>Small plates, loud beginnings.</p></header>
+        <ul class="items" role="list">
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="pasta-samosa"><i></i><em></em></span></div>
+            <div class="item__body">
+              <h3>Samosa Chaat <span class="heat" title="Sample heat level: medium">🌶🌶</span></h3>
+              <p class="item__desc">Crushed pastry, chickpea curry, three chutneys, a thunder of cumin oil. Invented, but plausible.</p>
+              <p class="item__tags mono">VEGETARIAN · SAMPLE £6.50</p>
+            </div>
+            <button class="item__add" type="button" data-id="samosa-chaat" data-name="Samosa Chaat" data-price="6.50" aria-label="Add Samosa Chaat to order"><span>+</span></button>
+          </li>
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="tikka"><i></i><em></em></span></div>
+            <div class="item__body">
+              <h3>Charcoal Tikka (3p)</h3>
+              <p class="item__desc">Yoghurt chilli marinade, char red-line. The concept's most-imagined bestseller.</p>
+              <p class="item__tags mono">GLUTEN-FREE (SAMPLE) · £9.00</p>
+            </div>
+            <button class="item__add" type="button" data-id="tikka" data-name="Charcoal Tikka" data-price="9.00" aria-label="Add Charcoal Tikka to order"><span>+</span></button>
+          </li>
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="pakora"><i></i><em></em></span></div>
+            <div class="item__body">
+              <h3>Onion Pakora Basket</h3>
+              <p class="item__desc">Rings within rings within snack. Amchur dusting, mint dip on the side.</p>
+              <p class="item__tags mono">VEGAN OPTION · £5.80</p>
+            </div>
+            <button class="item__add" type="button" data-id="pakora" data-name="Onion Pakora Basket" data-price="5.80" aria-label="Add Onion Pakora Basket to order"><span>+</span></button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- MAINS -->
+      <section class="course" id="mains">
+        <header class="course__head"><h2>Mains</h2><p>The curries the whole page was built to display.</p></header>
+        <ul class="items" role="list">
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="bowl bowl--butter"><i></i><em>cream swirl</em></span></div>
+            <div class="item__body">
+              <h3>Route Butter Chicken</h3>
+              <p class="item__desc">The house hypothesis: tomato sweetness, fenugreek finish, kasuri methi snowfall. Bone-in or cubed.</p>
+              <p class="item__tags mono">SIGNATURE · MILD · £13.50</p>
+            </div>
+            <button class="item__add" type="button" data-id="butter-chicken" data-name="Route Butter Chicken" data-price="13.50" aria-label="Add Route Butter Chicken to order"><span>+</span></button>
+          </li>
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="bowl bowl--rogan"><i></i><em></em></span></div>
+            <div class="item__body">
+              <h3>Rogan Josh (sample)</h3>
+              <p class="item__desc">Kashmiri chilli oil, whole spices, patience measured in hours the concept doesn't have.</p>
+              <p class="item__tags mono">🌶🌶🌶 · LAMB (FICTIONAL) · £15.00</p>
+            </div>
+            <button class="item__add" type="button" data-id="rogan" data-name="Rogan Josh" data-price="15.00" aria-label="Add Rogan Josh to order"><span>+</span></button>
+          </li>
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="bowl bowl--saag"><i></i><em></em></span></div>
+            <div class="item__body">
+              <h3>Saag Paneer Fold</h3>
+              <p class="item__desc">Greens worked till glossy, paneer corners left brown. Designed to photograph well; never photographed.</p>
+              <p class="item__tags mono">VEGETARIAN · MEDIUM · £12.00</p>
+            </div>
+            <button class="item__add" type="button" data-id="saag" data-name="Saag Paneer Fold" data-price="12.00" aria-label="Add Saag Paneer Fold to order"><span>+</span></button>
+          </li>
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="bowl bowl--dal"><i></i><em>butter island</em></span></div>
+            <div class="item__body">
+              <h3>Black Dal 48-Hour</h3>
+              <p class="item__desc">Slow is a design value here — the description claims 48 hours, the lentils have never existed.</p>
+              <p class="item__tags mono">VEGAN ADAPT · MILD · £10.50</p>
+            </div>
+            <button class="item__add" type="button" data-id="dal" data-name="Black Dal 48-Hour" data-price="10.50" aria-label="Add Black Dal 48-Hour to order"><span>+</span></button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- BREADS -->
+      <section class="course" id="breads">
+        <header class="course__head"><h2>Breads</h2><p>Scooping instruments, essentially.</p></header>
+        <ul class="items" role="list">
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="naan naan--butter"><i></i></span></div>
+            <div class="item__body">
+              <h3>Butter Naan</h3>
+              <p class="item__desc">Tandoor-leopard spots, brushed with a concept of cultured butter.</p>
+              <p class="item__tags mono">VEGETARIAN · £3.20</p>
+            </div>
+            <button class="item__add" type="button" data-id="naan" data-name="Butter Naan" data-price="3.20" aria-label="Add Butter Naan to order"><span>+</span></button>
+          </li>
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="naan naan--lucky"><i></i><em></em></span></div>
+            <div class="item__body">
+              <h3>Lucknowi Paratha</h3>
+              <p class="item__desc">Layered flake structure, nigella freckles, engineered for the fold.</p>
+              <p class="item__tags mono">🌶 · £3.80</p>
+            </div>
+            <button class="item__add" type="button" data-id="paratha" data-name="Lucknowi Paratha" data-price="3.80" aria-label="Add Lucknowi Paratha to order"><span>+</span></button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- RICE -->
+      <section class="course" id="rice">
+        <header class="course__head"><h2>Rice &amp; Sides</h2><p>Base layers and palate resets.</p></header>
+        <ul class="items" role="list">
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="rice-pile"><i></i><em></em></span></div>
+            <div class="item__body">
+              <h3>Saffron Pilaf</h3>
+              <p class="item__desc">Long grain dyed with the world's second-most expensive spice hypothesis.</p>
+              <p class="item__tags mono">VEGETARIAN · £4.50</p>
+            </div>
+            <button class="item__add" type="button" data-id="pilaf" data-name="Saffron Pilaf" data-price="4.50" aria-label="Add Saffron Pilaf to order"><span>+</span></button>
+          </li>
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="bowl bowl--raita"><i></i><em></em></span></div>
+            <div class="item__body">
+              <h3>Cucumber Raita</h3>
+              <p class="item__desc">The fire extinguisher. Roasted cumin ash on top, for the drama.</p>
+              <p class="item__tags mono">COOLS 🌶🌶🌶 · £3.00</p>
+            </div>
+            <button class="item__add" type="button" data-id="raita" data-name="Cucumber Raita" data-price="3.00" aria-label="Add Cucumber Raita to order"><span>+</span></button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- DESSERTS -->
+      <section class="course" id="desserts">
+        <header class="course__head"><h2>Desserts</h2><p>The dessert course a concept is allowed to overwrite.</p></header>
+        <ul class="items" role="list">
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="gulab"><i></i><em></em><b></b></span></div>
+            <div class="item__body">
+              <h3>Gulab Jamun Duo</h3>
+              <p class="item__desc">Two spheres, cardamom syrup, a Pistachio-dust gradient rendered in border-radius.</p>
+              <p class="item__tags mono">VEGETARIAN · £5.20</p>
+            </div>
+            <button class="item__add" type="button" data-id="gulab" data-name="Gulab Jamun Duo" data-price="5.20" aria-label="Add Gulab Jamun Duo to order"><span>+</span></button>
+          </li>
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="kulfi"><i></i><em></em></span></div>
+            <div class="item__body">
+              <h3>Malai Kulfi Stick</h3>
+              <p class="item__desc">Dense, slow-melting, served on a stick because cones were a different pitch meeting.</p>
+              <p class="item__tags mono">MINT FOR SURE · £4.60</p>
+            </div>
+            <button class="item__add" type="button" data-id="kulfi" data-name="Malai Kulfi Stick" data-price="4.60" aria-label="Add Malai Kulfi Stick to order"><span>+</span></button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- DRINKS -->
+      <section class="course" id="drinks">
+        <header class="course__head"><h2>Drinks</h2><p>Pourable design decisions.</p></header>
+        <ul class="items" role="list">
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="lassi"><i></i><em></em></span></div>
+            <div class="item__body">
+              <h3>Mango Lassi, Tall</h3>
+              <p class="item__desc">The glass the illustrator spent longest on. Mango content: purely aspirational.</p>
+              <p class="item__tags mono">VEGETARIAN · £4.20</p>
+            </div>
+            <button class="item__add" type="button" data-id="lassi" data-name="Mango Lassi" data-price="4.20" aria-label="Add Mango Lassi to order"><span>+</span></button>
+          </li>
+          <li class="item reveal">
+            <div class="item__art" aria-hidden="true"><span class="chai"><i></i><em></em></span></div>
+            <div class="item__body">
+              <h3>Kadak Chai</h3>
+              <p class="item__desc">Overboiled on principle, ginger bruised with the back of a design tool.</p>
+              <p class="item__tags mono">HOT · £2.80</p>
+            </div>
+            <button class="item__add" type="button" data-id="chai" data-name="Kadak Chai" data-price="2.80" aria-label="Add Kadak Chai to order"><span>+</span></button>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ======== FAQ ======== -->
+    <section class="faq" id="faq">
+      <div class="faq__inner">
+        <header class="faq__head reveal"><h2>Ordering questions, answered honestly</h2><p>Because a concept should still sound like a real operator wrote it.</p></header>
+        <div class="faq__grid">
+          <div class="faq__col">
+            <details>
+              <summary>Can I actually eat any of this?</summary>
+              <div class="faq__a"><p>Regrettably no. SpiceRoute is a studio concept build — the menu, prices, and wait times are invented to demonstrate ordering UX. The cart math, though, is genuinely working.</p></div>
+            </details>
+            <details>
+              <summary>Where does my cart go when I press “Place demo order”?</summary>
+              <div class="faq__a"><p>Nowhere, permanently. It computes a summary and clears itself. Nothing is transmitted, stored on a server, or charged — there is no server.</p></div>
+            </details>
+          </div>
+          <div class="faq__col">
+            <details>
+              <summary>Why are the dishes drawn in CSS?</summary>
+              <div class="faq__a"><p>Constraint makes style. No image licences, no CDN, no lazy-loading dance — just gradients and border-radius, rendering sharp at every zoom level and weighing kilobytes.</p></div>
+            </details>
+            <details>
+              <summary>Is the VAT rate real, at least?</summary>
+              <div class="faq__a"><p>20% is the plausible figure the demo uses so the math looks honest in screenshots. Treat it as set dressing with a decimal point.</p></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======== CART PANEL ======== -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="cart" id="cartPanel" role="dialog" aria-modal="false" aria-labelledby="cartTitle" aria-hidden="true">
+    <header class="cart__head">
+      <h2 id="cartTitle">Your order</h2>
+      <button class="cart__close" id="cartClose" type="button" aria-label="Close order panel">✕</button>
+    </header>
+    <p class="cart__disclaimer mono">DEMO CART · SAMPLE PRICES · NOTHING IS ORDERED OR CHARGED</p>
+    <ul class="cart__list" id="cartList" aria-live="polite"></ul>
+    <p class="cart__empty" id="cartEmpty">Your cart is a beautiful void.<br>Add a samosa chaat to the void.</p>
+    <footer class="cart__foot">
+      <dl class="cart__math">
+        <div><dt>Subtotal</dt><dd class="mono" id="sumSub">£0.00</dd></div>
+        <div><dt>VAT (20%, sample)</dt><dd class="mono" id="sumVat">£0.00</dd></div>
+        <div class="cart__total"><dt>Total</dt><dd class="mono" id="sumTotal">£0.00</dd></div>
+      </dl>
+      <button class="btn btn--saffron btn--wide" id="placeBtn" type="button" disabled>Place demo order</button>
+      <button class="btn btn--plain btn--wide" id="clearBtn" type="button">Empty the cart</button>
+    </footer>
+  </aside>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="ftr">
+    <div class="ftr__inner">
+      <div class="ftr__brand">
+        <p class="ftr__logo">Spice<b>Route</b></p>
+        <p>A concept online-ordering page. Fake food, real arithmetic.</p>
+      </div>
+      <nav aria-label="Menu"><h3>MENU</h3><a href="#starters">Starters</a><a href="#mains">Mains</a><a href="#breads">Breads</a><a href="#desserts">Desserts</a><a href="#drinks">Drinks</a></nav>
+      <nav aria-label="Info"><h3>INFO</h3><a href="#howto">How the demo works</a><a href="#faq">FAQ</a></nav>
+      <nav aria-label="Studio"><h3>STUDIO</h3><a href="https://nexapulsestudio.netlify.app" rel="noopener">NexaPulse Studio</a><a href="https://github.com/siddharth446/spiceroute-ordering-site" rel="noopener">Source on GitHub</a></nav>
+    </div>
+    <div class="ftr__legal">
+      <p>A studio concept build by <a href="https://nexapulsestudio.netlify.app" rel="noopener">NexaPulse Studio</a> — not a live client project. <a href="https://github.com/siddharth446/spiceroute-ordering-site" rel="noopener">View source on GitHub.</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
